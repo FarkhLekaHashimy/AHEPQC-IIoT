@@ -1,0 +1,36 @@
+Parsing Run A: COOJA_A.txt
+Parsing Run B: COOJA_B.txt
+
+====================================================================
+METRIC                                RUN A      RUN B    IMPROVE
+                                   Baseline     AHEPQC          %
+====================================================================
+1. Handshake Latency             459479.8ms 278585.4ms +   39.4%
+2. Energy per Handshake               0.0mJ      0.0mJ     0.0%
+3. Peak RAM Required                 61.5KB     16.5KB +   73.2%
+4. Communication Overhead          3256.0B    805.8B +   75.3%
+5. Telemetry Throughput            1080.3msg/m    180.9msg/m +  497.3%
+6. Firmware Update Time              17.0s     17.0s     0.0%
+7. Key/Signature Sizes             4532.0B    800.0B +   82.3%
+====================================================================
+  Rounds collected:  Run A = 4987  Run B = 4066
+
+====================================================================
+QERS  (Quantum Encryption Resilience Score) - Rassekhnia 2026
+Scale: 0-100  |  85-100=Excellent  70-84=Good  50-69=Moderate
+====================================================================
+QERS Layer                       Run A        Run B    Improve
+--------------------------------------------------------------------
+Basic QERS                   35.0 (   Poor   )    80.0 (   Good   ) + 45.0
+Tuned QERS                   18.5 ( Unusable )    83.5 (   Good   ) + 65.0
+Fusion QERS                  31.5 (   Poor   )    95.5 (Excellent ) + 64.0
+====================================================================
+
+QERS Input Metrics Used:
+  Latency:      Run A=459479.8ms   Run B=278585.4ms
+  Energy:       Run A=0.00mJ  Run B=0.00mJ
+  Overhead:     Run A=3256B    Run B=806B
+  Key/Sig:      Run A=4532B   Run B=800B
+  CPU model:    Run A=65%   Run B=25%
+  Packet loss:  Run A=1.8%  Run B=2.2%
+  RSSI:         Both=70 dBm (same radio conditions)
